@@ -49,7 +49,7 @@ const Header = () => {
   ];
 
   return (
-    <nav className="bg-[#171717]/5 backdrop-blur-xs rounded-md text-white px-6 py-4 shadow-lg lg:h-[70px] sticky top-0 z-50">
+    <nav className="bg-[#171717]/5 backdrop-blur-xs rounded-md text-white px-6 py-4 shadow-lg lg:h-[80px] sticky top-0 z-50">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <h1
@@ -79,7 +79,7 @@ const Header = () => {
                   onClick={() =>
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
-                  className={`hover:text-[#B57D58] ${
+                  className={`hover:text-[#B57D58] cursor-pointer ${
                     location.pathname === item.path
                       ? "text-[#B57D58] font-semibold"
                       : ""
@@ -99,7 +99,7 @@ const Header = () => {
           >
             <button
               onClick={handleScrollToContact}
-              className="px-6 py-2 ml-4 font-bold text-black transition-transform duration-300 bg-white rounded-full hover:scale-105"
+              className="px-8 py-3 ml-4 active:bg-primary-50 cursor-pointer font-bold text-black transition-all duration-500 bg-primary-white rounded-full hover:scale-105"
             >
               Contact
             </button>
@@ -138,7 +138,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="mt-4 space-y-2 md:hidden">
+        <ul className="mt-4 space-y-2 md:hidden py-4">
           {navItems.map((item) => (
             <li key={item.name}>
               {item.scroll ? (
@@ -155,7 +155,7 @@ const Header = () => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                     setIsOpen(false);
                   }}
-                  className={`block hover:text-[#B57D58] ${
+                  className={`block cursor-pointer hover:text-[#B57D58] ${
                     location.pathname === item.path
                       ? "text-[#B57D58] font-semibold"
                       : ""
@@ -175,7 +175,7 @@ const Header = () => {
           >
             <button
               onClick={handleScrollToContact}
-              className="block px-6 py-3 font-bold text-black transition-all duration-300 scale-105 bg-white rounded-full"
+              className="block px-6 py-3 font-bold text-black cursor-pointer transition-all duration-500 scale-105 active:bg-primary-50 bg-primary-white mt-4 w-full rounded-full"
             >
               Contact
             </button>

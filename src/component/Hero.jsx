@@ -4,14 +4,14 @@ import imagies from "./imagies"; // ensure this contains your image path
 
 const HeroSection = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen px-6 overflow-hidden text-white pb-22 md:px-12 lg:px-20">
+    <section className="relative flex flex-col items-center justify-center min-h-screen px-6 pt-24 pb-32 md:px-12 lg:px-20 text-white overflow-hidden">
       {/* Text */}
-      <div className="relative z-20 mb-6 text-center md:mb-10 lg:mb-16">
-        <h1 className="text-4xl font-bold leading-tight md:text-6xl">
+      <div className="relative z-20 mb-8 text-center md:mb-12 lg:mb-16">
+        <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
           I’m{" "}
           <span className="text-[#C1B63A] relative">
-            AbdulMujeeb,
-            <span className="absolute left-1/2 -translate-x-1/2 -top-3 w-8 h-3 bg-[#C1B63A] rounded-full opacity-80"></span>
+            AbdulMujeeb
+            <span className="absolute left-1/2 -translate-x-1/2 -top-3 w-10 h-2 bg-[#C1B63A] rounded-full opacity-80"></span>
           </span>{" "}
           <br />
           Product Designer
@@ -19,11 +19,11 @@ const HeroSection = () => {
       </div>
 
       {/* Quote and Stars */}
-      <div className="relative z-20 flex flex-col items-start justify-between w-full max-w-5xl gap-6 mt-2 md:flex-row md:mt-4">
+      <div className="relative z-20 flex flex-col items-center md:flex-row md:items-start justify-between w-full max-w-5xl gap-6 md:gap-12 mt-6">
         {/* Left Quote */}
-        <div className="max-w-xs text-sm leading-relaxed text-gray-300 lg:text-[18px] md:text-base lg:-translate-x-18">
+        <div className="max-w-md text-gray-300 text-center md:text-left text-base md:text-lg lg:text-xl">
           <span className="text-3xl text-[#C1B63A]">“</span>
-          <p>
+          <p className="mt-2 leading-relaxed">
             AbdulMujeeb’s design is thoughtful, user-centered, and merges
             creativity, usability, and strategy. Every pixel, flow, and
             interaction is crafted to solve real problems and create meaningful
@@ -32,7 +32,7 @@ const HeroSection = () => {
         </div>
 
         {/* Stars */}
-        <div className="flex gap-2 text-[#C1B63A] self-center md:self-start">
+        <div className="flex gap-2 mt-4 md:mt-0 text-[#C1B63A]">
           {[...Array(4)].map((_, i) => (
             <Star key={i} fill="#C1B63A" stroke="none" size={28} />
           ))}
@@ -40,15 +40,15 @@ const HeroSection = () => {
       </div>
 
       {/* Profile Image with yellow arc */}
-      <div className="absolute bottom-0 z-10 flex flex-col items-center -translate-x-1/2 translate-y-4 left-1/2 md:translate-y-10 lg:translate-y-14">
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-20 md:-translate-y-16 lg:-translate-y-8 flex flex-col items-center z-10">
         {/* Arc background */}
-        <div className="w-[450px] lg:w-[600px] lg:h-[330px] h-[240px] bg-gradient-to-t from-[#C1B63A] to-[#7A6C25] rounded-t-full absolute bottom-0 lg:translate-x-5"></div>
+        <div className="absolute bottom-0 w-[280px] h-[180px] md:w-[400px] md:h-[250px] lg:w-[600px] lg:h-[330px] bg-gradient-to-t from-[#C1B63A] to-[#7A6C25] rounded-t-full"></div>
 
         {/* Image */}
         <img
           src={imagies.person}
           alt="AbdulMujeeb"
-          className="relative  lg:translate-y-8 z-10 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] object-cover rounded-lg border-4 border-transparent"
+          className="relative w-[220px] h-[220px] md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[500px] object-cover rounded-xl border-4 border-transparent z-10"
         />
       </div>
     </section>

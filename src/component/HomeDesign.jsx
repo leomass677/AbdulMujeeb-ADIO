@@ -43,7 +43,7 @@ const HomeDesign = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-10 py-3 text-sm font-semibold text-white transition-all duration-300 border rounded-full shadow-md cursor-pointer sm:text-base lg:px-12 lg:py-4 border-white/20 bg-white/10 hover:bg-white/20 backdrop-blur-sm hover:shadow-lg"
+          className="px-10 py-3 text-sm font-semibold text-white transition-all duration-300 border rounded-full shadow-md cursor-pointer sm:text-base lg:px-12 lg:py-4 border-white/20  bg-white/10 hover:bg-white/20 active:bg-primary-white/25 backdrop-blur-sm hover:shadow-lg"
         >
           Download Resume
         </motion.button>
@@ -58,23 +58,27 @@ const HomeDesign = () => {
         {/* === Drive9ja === */}
         <div
           onClick={() => setShowDrive(!showDrive)}
-          className="relative flex-1 w-full rounded-lg cursor-pointer bg-primary-white overflow-clip group min-h-90"
+          className="relative flex-1 w-full rounded-lg cursor-pointer bg-primary-white overflow-hidden group min-h-[22rem] flex items-center justify-center"
         >
+          {/* Centered Image */}
           <motion.img
             src={imagies.Drive9ja}
             alt="Drive9ja"
             initial={{ scale: 1.1 }}
             whileInView={{ scale: 1 }}
             transition={{ duration: 1 }}
-            className={`${
-              showDrive
-                ? "h-50 translate-y-5 translate-x-3/4 transition-all duration-1000 ease-in-out w-auto "
-                : "transition-all duration-1000 ease-in-out translate-y-1/2 group-hover:translate-y-5 translate-x-3/4 h-50 w-auto"
-            }`}
+            className={`border-2 rounded-xl transition-all duration-1000 ease-in-out
+      ${
+        showDrive
+          ? "h-52 -translate-y-8 w-auto"
+          : "h-52 w-auto translate-y-1/2 group-hover:-translate-y-8"
+      }`}
           />
 
+          {/* Floating Button */}
           <motion.button
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation(); // prevents triggering parent click
               navigate("/design/drive9ja");
               window.scrollTo(0, 0);
             }}
@@ -84,14 +88,16 @@ const HomeDesign = () => {
             ➡
           </motion.button>
 
+          {/* Text Card */}
           <div
-            className={`absolute flex flex-col w-full max-w-md gap-4 p-4 transition-all duration-700 border-2 shadow-md rounded-xl left-6 bottom-6 bg-primary-white/20 backdrop-blur-sm border-grey-50 ${
-              showDrive
-                ? "translate-y-0"
-                : "translate-y-20 lg:group-hover:translate-y-0"
-            }`}
+            className={`absolute flex flex-col w-[90%] max-w-md left-1/2 -translate-x-1/2 gap-4 p-4 transition-all duration-700 border-2 shadow-md rounded-xl bottom-6 bg-primary-white/20 backdrop-blur-xl border-grey-50/10
+      ${
+        showDrive
+          ? "translate-y-0"
+          : "translate-y-20 lg:group-hover:translate-y-0"
+      }`}
           >
-            <p className="text-6xl font-semibold text-primary-dark/75">
+            <p className="text-5xl font-semibold text-primary-dark/75">
               Drive9ja
             </p>
             <p className="max-w-xs text-sm font-medium text-primary-dark/75">
@@ -119,11 +125,12 @@ const HomeDesign = () => {
           </motion.button>
 
           <div
-            className={`absolute flex flex-col w-full max-w-md gap-4 p-4 transition-all duration-700 border-2 shadow-md rounded-xl left-6 bottom-6 bg-primary-white/20 backdrop-blur-xl border-grey-50/10 ${
-              showCheckMate
-                ? "translate-y-0"
-                : "translate-y-20 lg:group-hover:translate-y-0"
-            }`}
+            className={`absolute flex flex-col w-[95%] -translate-x-1/2 left-[50%]
+               lg:max-w-md gap-4 p-4 transition-all duration-700 border-2 shadow-md rounded-xl bottom-6 bg-primary-white/20 backdrop-blur-xl border-grey-50/10 ${
+                 showCheckMate
+                   ? "translate-y-0"
+                   : "translate-y-20 lg:group-hover:translate-y-0"
+               }`}
           >
             <p className="text-6xl font-semibold text-white/80">Check Mate</p>
             <p className="max-w-md font-medium text-md text-primary-dark">

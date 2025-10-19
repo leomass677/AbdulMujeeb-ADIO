@@ -50,7 +50,7 @@ const Drive9ja = () => {
         </div>
 
         {/* Phones */}
-        <div className="flex justify-center gap-8 lg:justify-start lg:gap-16 lg:-translate-y-50 lg:absolute lg:right-40">
+        <div className="flex justify-center gap-8 lg:justify-start lg:gap-16 lg:-translate-y-30 lg:absolute lg:right-0 ">
           <img
             src={imagies.phone_1}
             alt="Phone UI 1"
