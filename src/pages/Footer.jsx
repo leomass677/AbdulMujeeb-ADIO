@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { GoArrowUpRight } from "react-icons/go";
 import {
   FaXTwitter,
   FaLinkedinIn,
@@ -22,6 +23,7 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
+      id="contact-section"
       className="bg-[#595959] text-white rounded-3xl mt-20 px-6 sm:px-12 md:px-20 py-14"
     >
       {/* === Top Section === */}
@@ -41,9 +43,12 @@ const Footer = () => {
           onClick={handleScrollToContact}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-[#d8c226] text-black font-semibold px-8 py-3 rounded-full flex items-center gap-2 text-lg hover:bg-[#e0cf4c] transition cursor-pointer"
+          className="bg-[#d8c226] text-black flex justify-between font-semibold px-8 py-3 rounded-full flex items-center gap-2 text-lg hover:bg-[#e0cf4c] transition cursor-pointer"
         >
-          Hire me <span className="text-xl">↗</span>
+          Hire me{" "}
+          <span className="text-xl">
+            <GoArrowUpRight className="text-2xl" />
+          </span>
         </motion.a>
       </motion.div>
 
@@ -140,7 +145,7 @@ const Footer = () => {
           <ul className="space-y-2 text-gray-300">
             <li>
               <a
-                href="https://twitter.com/"
+                href="https://x.com/properilorinboy?s=21"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 transition hover:text-yellow-400"
@@ -150,7 +155,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/abdulmujeeb-adio-299a0a213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 transition hover:text-yellow-400"
@@ -160,7 +165,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://dribbble.com/"
+                href="https://dribbble.com/abd-mujeeb-adio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 transition hover:text-yellow-400"
@@ -170,7 +175,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://behance.net/"
+                href="https://behance.net/abdmujeebadio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 transition hover:text-yellow-400"

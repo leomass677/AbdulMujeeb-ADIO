@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import imagies from "./imagies";
 import check_mate from "../assets/check_mate.png";
 import { useNavigate } from "react-router-dom";
+import { GoArrowRight } from "react-icons/go";
 
 const HomeDesign = () => {
   const [showDrive, setShowDrive] = useState(false);
@@ -43,6 +44,11 @@ const HomeDesign = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={(e) => {
+            e.stopPropagation(); // prevents triggering parent click
+            navigate("*");
+            window.scrollTo(0, 0);
+          }}
           className="px-10 py-3 text-sm font-semibold text-white transition-all duration-300 border rounded-full shadow-md cursor-pointer sm:text-base lg:px-12 lg:py-4 border-white/20  bg-white/10 hover:bg-white/20 active:bg-primary-white/25 backdrop-blur-sm hover:shadow-lg"
         >
           Download Resume
@@ -67,11 +73,11 @@ const HomeDesign = () => {
             initial={{ scale: 1.1 }}
             whileInView={{ scale: 1 }}
             transition={{ duration: 1 }}
-            className={`border-2 rounded-xl transition-all duration-1000 ease-in-out
+            className={`border-2 rounded-xl translate-y-[15%] absolute transition-all duration-1000 ease-in-out
       ${
         showDrive
-          ? "h-52 -translate-y-8 w-auto"
-          : "h-52 w-auto translate-y-1/2 group-hover:-translate-y-8"
+          ? "h-52 -translate-y-10 w-auto"
+          : "h-52 w-auto translate-y-1/2 group-hover:-translate-y-10"
       }`}
           />
 
@@ -85,7 +91,9 @@ const HomeDesign = () => {
             whileHover={{ rotate: 90 }}
             className="absolute p-1 text-2xl transition-all duration-300 border rounded-full shadow-md cursor-pointer size-14 hover:bg-yellow bg-primary-white top-4 right-4 text-primary-dark group-hover:scale-110 border-grey-50 group-hover:shadow-md"
           >
-            ➡
+            <span className="bg-primary-white w-full h-full flex items-center justify-center rounded-full">
+              <GoArrowRight />
+            </span>
           </motion.button>
 
           {/* Text Card */}
@@ -97,7 +105,7 @@ const HomeDesign = () => {
           : "translate-y-20 lg:group-hover:translate-y-0"
       }`}
           >
-            <p className="text-5xl font-semibold text-primary-dark/75">
+            <p className=" text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-dark/75">
               Drive9ja
             </p>
             <p className="max-w-xs text-sm font-medium text-primary-dark/75">
@@ -119,9 +127,11 @@ const HomeDesign = () => {
               window.scrollTo(0, 0);
             }}
             whileHover={{ rotate: 90 }}
-            className="absolute p-1 text-2xl transition-all duration-300 border rounded-full shadow-md cursor-pointer size-14 hover:bg-yellow bg-primary-white top-4 right-4 text-primary-dark group-hover:scale-110 border-grey-50 group-hover:shadow-md"
+            className="absolute flex p-1 text-2xl transition-all duration-300 border rounded-full shadow-md cursor-pointer size-14 hover:bg-yellow bg-primary-white top-4 right-4 text-primary-dark group-hover:scale-110 border-grey-50 group-hover:shadow-md"
           >
-            ➡
+            <span className="bg-primary-white w-full h-full flex items-center justify-center rounded-full">
+              <GoArrowRight />
+            </span>
           </motion.button>
 
           <div
@@ -132,7 +142,9 @@ const HomeDesign = () => {
                    : "translate-y-20 lg:group-hover:translate-y-0"
                }`}
           >
-            <p className="text-6xl font-semibold text-white/80">Check Mate</p>
+            <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white/80">
+              Check Mate
+            </p>
             <p className="max-w-md font-medium text-md text-primary-dark">
               Smart Task Management for Students and Teams
             </p>

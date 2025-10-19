@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { GoArrowLeft } from "react-icons/go";
 
 const NotFound = () => {
   const navigate = useNavigate();
@@ -41,9 +42,10 @@ const NotFound = () => {
           navigate("/");
           window.scrollTo(0, 0);
         }}
-        className="px-8 py-3 mt-8 font-semibold text-black transition bg-yellow-400 rounded-full shadow-md cursor-pointer hover:bg-yellow-500"
+        className="px-8 py-3 mt-8 flex font-semibold justify-center items-center gap-1 text-black transition bg-yellow-400 rounded-full shadow-md cursor-pointer hover:bg-yellow-500"
       >
-        Go Back Home ↩
+        <span> Go Back Home</span>{" "}
+        <GoArrowLeft className="font-black text-2xl" />
       </motion.button>
     </div>
   );

@@ -21,7 +21,7 @@ const HeroSection = () => {
       {/* Quote and Stars */}
       <div className="relative z-20 flex flex-col items-center md:flex-row md:items-start justify-between w-full max-w-5xl gap-6 md:gap-12 mt-6">
         {/* Left Quote */}
-        <div className="max-w-md text-gray-300 text-center md:text-left text-base md:text-lg lg:text-xl">
+        <div className="max-w-md text-gray-300 text-center  md:text-left text-base md:text-lg lg:text-xl">
           <span className="text-3xl text-[#C1B63A]">“</span>
           <p className="mt-2 leading-relaxed">
             AbdulMujeeb’s design is thoughtful, user-centered, and merges
