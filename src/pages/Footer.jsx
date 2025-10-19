@@ -59,7 +59,7 @@ const Footer = () => {
           <p className="mb-4 text-sm text-gray-300">UI/UX Designer</p>
           <div className="flex gap-4 text-2xl">
             <a
-              href="https://twitter.com/"
+              href="https://x.com/properilorinboy?s=21"
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-yellow-400"
@@ -67,7 +67,7 @@ const Footer = () => {
               <FaXTwitter />
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/abdulmujeeb-adio-299a0a213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-yellow-400"
@@ -75,7 +75,7 @@ const Footer = () => {
               <FaLinkedinIn />
             </a>
             <a
-              href="https://dribbble.com/"
+              href="https://dribbble.com/abd-mujeeb-adio"
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-yellow-400"
@@ -83,7 +83,7 @@ const Footer = () => {
               <FaDribbble />
             </a>
             <a
-              href="https://behance.net/"
+              href="https://www.behance.net/abdmujeebadio"
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-yellow-400"
