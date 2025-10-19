@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/about";
 import ContactUs from "./pages/ContactUs";
-import Design from "./pages/design";
+import Design from "./pages/Design";
 import Testimonies from "./pages/Testimonies";
 import Header from "./pages/Header";
 import Footer from "./pages/Footer";
 import NotFound from "./pages/NotFound";
+import About from "./pages/About";
 
 const App = () => {
   return (
