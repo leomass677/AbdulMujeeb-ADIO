@@ -2,7 +2,7 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import imagies from "../component/imagies";
 
-const about = () => {
+const About = () => {
   return (
     <div>
       <div className=" grid grid-rows-1 items-stretch md:grid-cols-2 lg:grid-cols-2 gap-6 text-white justify-center  min-h-[calc(100vh-80px)] py-10 leading-relaxed text-[16px] font-normal">
@@ -132,4 +132,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
