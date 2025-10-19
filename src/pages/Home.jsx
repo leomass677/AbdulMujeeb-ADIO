@@ -1,8 +1,9 @@
 import React from "react";
 import imagies from "../component/imagies";
-import { div } from "framer-motion/client";
+import { motion } from "framer-motion";
+
 import Hero from "../component/Hero";
-import Services from "../component/services";
+import Services from "../component/Services";
 import HomeDesign from "../component/HomeDesign";
 
 const Home = () => {
