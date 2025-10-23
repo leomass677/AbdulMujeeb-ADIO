@@ -138,13 +138,13 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="mt-4 space-y-2 md:hidden py-4">
+        <ul className="mt-4 space-y-6 md:hidden py-4">
           {navItems.map((item) => (
-            <li key={item.name}>
+            <li key={item.name} className="border-b pb-4 border-white/80 group">
               {item.scroll ? (
                 <button
                   onClick={item.scroll}
-                  className="block hover:text-[#B57D58]"
+                  className="block hover:text-[#B57D58]  "
                 >
                   {item.name}
                 </button>
@@ -175,7 +175,7 @@ const Header = () => {
           >
             <button
               onClick={handleScrollToContact}
-              className="block px-6 py-3 font-bold text-black cursor-pointer transition-all duration-500 scale-105 active:bg-primary-50 bg-primary-white mt-4 w-full rounded-full"
+              className="block px-6 py-3 font-bold text-black cursor-pointer transition-all duration-500 scale-105 focus:scale-110 active:bg-primary-50 bg-primary-white mt-4 w-full rounded-full"
             >
               Contact
             </button>
