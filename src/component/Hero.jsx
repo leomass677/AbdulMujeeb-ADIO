@@ -4,10 +4,10 @@ import imagies from "./imagies"; // ensure this contains your image path
 
 const HeroSection = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen px-6 pt-24 pb-32 md:px-12 lg:px-20 text-white overflow-hidden">
+    <section className="relative flex flex-col items-center lg:justify-center justify-between mt-10 sm:mt-12 min-h-screen px-6  lg:pt-0 pb-32 md:px-12 lg:px-0 text-white overflow-hidden    max-h-screen">
       {/* Text */}
       <div className="relative z-20 mb-8 text-center md:mb-12 lg:mb-16">
-        <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+        <h1 className="text-2xl font-bold leading-tight md:text-6xl lg:text-4xl ">
           I’m{" "}
           <span className="text-[#C1B63A] relative">
             AbdulMujeeb
@@ -19,11 +19,13 @@ const HeroSection = () => {
       </div>
 
       {/* Quote and Stars */}
-      <div className="relative z-20 flex flex-col items-center md:flex-row md:items-start justify-between w-full max-w-5xl gap-6 md:gap-12 mt-6">
+      <div className="relative h-[70vh] z-20 flex flex-col items-center md:flex-row md:items-start justify-start  lg:justify-between w-full  gap-6 md:gap-12 mt-6  -amber-300 ">
         {/* Left Quote */}
-        <div className="max-w-md text-gray-300 text-center  md:text-left text-base md:text-lg lg:text-xl">
-          <span className="text-3xl text-[#C1B63A]">“</span>
-          <p className="mt-2 leading-relaxed">
+        <div className="w-full lg:max-w-[35%] lg:-translate-y-30 text-gray-300 text-center  md:text-left text-base md:text-lg lg:text-xl ">
+          <span className="text-3xl md:text-4xl lg:text-5xl text-[#C1B63A] ">
+            “
+          </span>
+          <p className="mt-2 leading-relaxed md:text-xl">
             AbdulMujeeb’s design is thoughtful, user-centered, and merges
             creativity, usability, and strategy. Every pixel, flow, and
             interaction is crafted to solve real problems and create meaningful
@@ -40,15 +42,15 @@ const HeroSection = () => {
       </div>
 
       {/* Profile Image with yellow arc */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-20 md:-translate-y-16 lg:-translate-y-8 flex flex-col items-center z-10">
+      <div className="absolute bottom-12 w-full   lg:bottom-25 left-1/2 transform -translate-x-1/2 -translate-y-20 md:-translate-y-16 lg:-translate-y-4 flex flex-col  items-center z-10 ">
         {/* Arc background */}
-        <div className="absolute bottom-0 w-[280px] h-[180px] md:w-[400px] md:h-[250px] lg:w-[600px] lg:h-[330px] bg-gradient-to-t from-[#C1B63A] to-[#7A6C25] rounded-t-full"></div>
+        <div className="absolute bottom-1 w-[80vw] h-[230px] md:w-[450px] md:h-[300px] lg:w-[450px] lg:h-[220px] bg-gradient-to-t from-[#C1B63A] to-[#7A6C25] rounded-t-full   "></div>
 
         {/* Image */}
         <img
           src={imagies.person}
           alt="AbdulMujeeb"
-          className="relative w-[220px] h-[220px] md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[500px] object-cover rounded-xl border-4 border-transparent z-10"
+          className="md:relative absolute bottom-0   w-[300px] h-[350px] md:w-[450px] md:h-[450px] lg:w-[310px] lg:h-[300px]  object-cover rounded-sm shadow-xs border-4 border-transparent z-10 "
         />
       </div>
     </section>

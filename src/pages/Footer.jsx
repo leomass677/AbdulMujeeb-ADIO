@@ -24,7 +24,7 @@ const Footer = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
       id="contact-section"
-      className="bg-[#595959] text-white rounded-3xl mt-20 px-6 sm:px-12 md:px-20 py-14"
+      className="bg-[#595959] text-white rounded-3xl mt-20 px-6 sm:px-12 md:px-20 py-2"
     >
       {/* === Top Section === */}
       <motion.div
@@ -230,7 +230,7 @@ const Footer = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
-        className="mt-10 text-sm text-center text-gray-300"
+        className="mt-10 text-sm text-center border-t-2 border-gray-200 text-gray-300 py-4 "
       >
         © {new Date().getFullYear()} AbdulMujeeb ADIO
       </motion.p>
