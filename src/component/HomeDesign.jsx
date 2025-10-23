@@ -49,7 +49,6 @@ const HomeDesign = () => {
           onClick={(e) => {
             e.stopPropagation();
             navigate("/");
-            window.scrollTo(0, 0);
           }}
           className="px-10 py-3 text-sm font-semibold text-white transition-all duration-300 border rounded-full shadow-md cursor-pointer sm:text-base lg:px-12 lg:py-4 border-white/20  bg-white/10 hover:bg-white/20 active:bg-primary-white/25 backdrop-blur-sm hover:shadow-lg"
         >
@@ -86,7 +85,6 @@ const HomeDesign = () => {
             onClick={(e) => {
               e.stopPropagation();
               navigate("/design/drive9ja");
-              window.scrollTo(0, 0);
             }}
             whileHover={{ rotate: 90 }}
             className="absolute p-1 text-2xl transition-all duration-300 border rounded-full shadow-md cursor-pointer size-14 hover:bg-yellow bg-primary-white top-4 right-4 text-primary-dark group-hover:scale-110 border-grey-50 group-hover:shadow-md"
@@ -130,7 +128,6 @@ const HomeDesign = () => {
           <motion.button
             onClick={() => {
               navigate("/design/checkmate");
-              window.scrollTo(0, 0);
             }}
             whileHover={{ rotate: 90 }}
             className="absolute flex p-1 text-2xl transition-all duration-300 border rounded-full shadow-md cursor-pointer size-14 hover:bg-yellow bg-primary-white top-4 right-4 text-primary-dark group-hover:scale-110 border-grey-50 group-hover:shadow-md"

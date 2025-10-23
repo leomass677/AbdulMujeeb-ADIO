@@ -21,7 +21,7 @@ const App = () => {
           linear-gradient(135deg, #171717 30%, #B57D58 70%)
         `,
       }}
-      className="px-[16px] sm:px-[20px] md:px-[48px] lg:px-[120px] pt-8 font-Manrope"
+      className="px-[16px] sm:px-[20px] md:px-[48px] lg:px-[120px] pt-8 pb-1 font-Manrope"
     >
       <Header />
       <Routes>

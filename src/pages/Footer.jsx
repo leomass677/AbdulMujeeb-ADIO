@@ -24,7 +24,7 @@ const Footer = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
       id="contact-section"
-      className="bg-[#595959] text-white rounded-3xl mt-20 px-6 sm:px-12 md:px-20 py-2"
+      className="bg-[#595959] text-white rounded-3xl mt-20 px-6 sm:px-12 md:px-20  py-6 lg:pt-12"
     >
       {/* === Top Section === */}
       <motion.div

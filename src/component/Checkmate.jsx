@@ -1,7 +1,11 @@
 import React from "react";
 import imagies from "./imagies";
+import { useEffect } from "react";
 
 const Checkmate = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="flex flex-col items-center gap-12 px-4 text-primary-white lg:gap-20 sm:px-6 md:px-10">
       {/* Title */}
